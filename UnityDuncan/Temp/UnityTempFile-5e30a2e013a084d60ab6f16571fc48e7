@@ -188,6 +188,8 @@
 'Assets/Myo/Scripts/Myo.NET/Vector3.cs'
 'Assets/Myo/Scripts/ThalmicHub.cs'
 'Assets/Myo/Scripts/ThalmicMyo.cs'
+'Assets/Scripts/ExternalComm.cs'
+'Assets/Scripts/SampleSceneGUI.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/UnityScript.dll'

@@ -13,35 +13,16 @@ public class PhotonComm : MonoBehaviour {
 	// Create coroutine
 	IEnumerator SetArm()
 	{
-//		WWWForm form = new WWWForm();
-//		form.AddField( "leg", "Left" );
-//
-//		UnityWebRequest www = UnityWebRequest.Post(particleURI, form);
-//		yield return www.SendWebRequest();
-//
-//		if(www.isNetworkError || www.isHttpError) {
-//			Debug.Log(www.error);
-//		}
-//		else {
-//			Debug.Log("Text upload complete!");
-//		}
+		WWWForm form = new WWWForm ();
+		form.AddField ("leg", "Left");
 
+		UnityWebRequest www = UnityWebRequest.Post (particleURI, form);
+		yield return www.SendWebRequest ();
 
-
-		AmazonLambdaConfig config = new AmazonLambdaConfig() { RegionEndpoint = RegionEndpoint.APSouth1};
-		AmazonLambdaClient client = new AmazonLambdaClient("AccKey", "SecKey", config);
-		InvokeRequest request = new InvokeRequest() { FunctionName = "FuncName" };
-		InvokeResponse response = client.Invoke(request);
-		if (null != response && response.StatusCode == 200)
-		{
-			var sr = new StreamReader(response.Payload);
-			string result = sr.ReadToEnd();
+		if (www.isNetworkError || www.isHttpError) {
+			Debug.Log (www.error);
+		} else {
+			Debug.Log ("Text upload complete!");
 		}
-	}
-
-	void Start()
-	{
-		// Start coroutine to get Particle light data 
-		StartCoroutine(SetArm());
 	}
 }

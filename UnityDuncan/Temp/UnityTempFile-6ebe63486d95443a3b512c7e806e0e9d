@@ -72,16 +72,14 @@
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.Graphs.dll'
--r:'/Applications/Unity/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll'
--r:'/Applications/Unity/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll'
--r:'/Users/hunterdubel/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll'
--r:'/Users/hunterdubel/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll'
--r:'/Users/hunterdubel/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll'
--r:'/Users/hunterdubel/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll'
--r:'/Users/hunterdubel/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll'
--r:'/Users/hunterdubel/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll'
--r:'/Users/hunterdubel/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll'
+-r:'/Users/dsarnell/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll'
+-r:'/Users/dsarnell/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll'
+-r:'/Users/dsarnell/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll'
+-r:'/Users/dsarnell/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll'
+-r:'/Users/dsarnell/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll'
+-r:'/Users/dsarnell/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll'
+-r:'/Users/dsarnell/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll'
 -define:UNITY_5_3_OR_NEWER
 -define:UNITY_5_4_OR_NEWER
 -define:UNITY_5_5_OR_NEWER
@@ -179,6 +177,7 @@
 -define:UNITY_EDITOR_OSX
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
+'Assets/Door Test/Scripts/OpenDoor.cs'
 'Assets/Myo/Scripts/Myo.NET/EventTypes.cs'
 'Assets/Myo/Scripts/Myo.NET/Hub.cs'
 'Assets/Myo/Scripts/Myo.NET/libmyo.cs'
@@ -189,9 +188,7 @@
 'Assets/Myo/Scripts/Myo.NET/Vector3.cs'
 'Assets/Myo/Scripts/ThalmicHub.cs'
 'Assets/Myo/Scripts/ThalmicMyo.cs'
-'Assets/Scripts/ColorBoxByPose.cs'
-'Assets/Scripts/JointOrientation.cs'
-'Assets/Scripts/PhotonComm.cs'
+'Assets/Scripts/ExternalComm.cs'
 'Assets/Scripts/SampleSceneGUI.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'
