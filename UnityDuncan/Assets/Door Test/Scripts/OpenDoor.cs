@@ -46,15 +46,15 @@ public class OpenDoor : MonoBehaviour
 
             // Change material when wave in, wave out or double tap poses are made.
             } else if (thalmicMyo.pose == Pose.WaveIn) {
-                GetComponent<Renderer>().material = waveInMaterial;
+				GetComponent<Renderer> ().transform.Rotate (Vector3.right * 20);
 
                 ExtendUnlockAndNotifyUserAction (thalmicMyo);
             } else if (thalmicMyo.pose == Pose.WaveOut) {
-                GetComponent<Renderer>().material = waveOutMaterial;
+				GetComponent<Renderer> ().transform.Rotate (Vector3.left * 20);
 
                 ExtendUnlockAndNotifyUserAction (thalmicMyo);
             } else if (thalmicMyo.pose == Pose.DoubleTap) {
-                GetComponent<Renderer>().material = doubleTapMaterial;
+				GetComponent<Renderer> ().transform.Rotate (Vector3.down * 20);
 
                 ExtendUnlockAndNotifyUserAction (thalmicMyo);
             }
