@@ -7,8 +7,7 @@ We were inspired to improve accessibility for the elderly and disabled by our fa
 ## What it does
 AbleHome is a framework that connects the Myo Gesture Control Armband with smart home devices. Functioning through Amazon Web Services, AbleHome can communicate to any modern API for utilizing smarttech. Our framework is displayed through Unity, which demonstrates how the Myo can be utilized to open and close doors and access various other objects in their home. Additionally, certain doors or objects can be selected for observation. Should an individual choose to go through one of the doors, a notification will be sent out.
 
-![alt text](https://github.com/hdubel94/AbleHome/blob/master/blockdiagram.png "Logo Title Text 1")
-<img src="https://github.com/hdubel94/AbleHome/blob/master/blockdiagram.png">
+![alt text](https://github.com/hdubel94/AbleHome/blob/master/blockdiagram.png "AbleHome Architecture")
 
 
 ## Challenges we ran into
