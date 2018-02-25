@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.Networking;
 
 using LockingPolicy = Thalmic.Myo.LockingPolicy;
 using Pose = Thalmic.Myo.Pose;
@@ -29,7 +31,34 @@ public class OpenDoor : MonoBehaviour
 	// so that actions are only performed upon making them rather than every frame during
 	// which they are active.
 	private Pose _lastPose = Pose.Unknown;
+	private bool isClosed = true;
 	private bool isLocked = true;
+
+	// Create variables 
+	private string particleURI = "https://7xaemmkvnf.execute-api.us-east-1.amazonaws.com/alpha";
+
+	// Create coroutine
+	IEnumerator SetArm()
+	{
+		WWWForm form = new WWWForm ();
+		string bodyData = "{\"led\": \"right\"}";
+
+		var request = new UnityWebRequest(particleURI, "POST");
+		byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(bodyData);
+		request.uploadHandler = (UploadHandler) new UploadHandlerRaw(bodyRaw);
+		request.downloadHandler = (DownloadHandler) new DownloadHandlerBuffer();
+		request.SetRequestHeader("Content-Type", "application/json");
+
+		yield return request.Send();
+
+		Debug.Log("Status Code: " + request.responseCode);
+
+		if (request.isNetworkError || request.isHttpError) {
+			Debug.Log (request.downloadHandler.text);
+		} else {
+			Debug.Log ("Text upload complete!");
+		}
+	}
 
 	// Update is called once per frame.
 	void Update ()
@@ -48,14 +77,26 @@ public class OpenDoor : MonoBehaviour
 
 		if (!isLocked) {
 			float currentZ = myo.transform.forward.z;
-			Debug.Log (currentZ);
+			//Debug.Log (currentZ);
 
-			if (currentZ < 0) {
+			if (currentZ <= 0) {
 				transform.rotation = new Quaternion(0, 0, 0, 1);
+				if (!isClosed) {
+					isClosed = true;
+					StartCoroutine ("SetArm");
+				}
 			} else if (currentZ > 1) {
 				transform.rotation = new Quaternion(0, 1, 0, 1);
+				if (isClosed) {
+					isClosed = false;
+					StartCoroutine ("SetArm");
+				}
 			} else {
 				transform.rotation = new Quaternion(0, currentZ, 0, 1);
+				if (isClosed) {
+					isClosed = false;
+					StartCoroutine ("SetArm");
+				}
 			}
 		}
 	}
