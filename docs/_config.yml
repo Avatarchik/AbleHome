@@ -1,58 +1,20 @@
 # Site settings
-title: Hanuman
-description: Hanuman is a minimal yet powerful Jekyll theme for your blogs and websites.
-cover: assets/images/radhakrishna.jpg
-logo: assets/images/logo.png
-favicon: assets/images/favicon.png
-baseurl: "/hanuman/" # the subpath of your site, e.g. /blog/ or / for root
-url: "https://samanyougarg.com" # the base hostname & protocol for your site
-paginate:	0 # The number of posts to show per page on your homepage
+title: AbleHome
+description: A SmartHome addition aimed at restoring lost independence.
+# baseurl: "/particle" # the subpath of your site, e.g. /blog
+# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
-# Social
-facebook: facebook
-twitter: twitter
-github:  github
+# User settings
+username: AbleHome
+user_description: A smarthome infrastructure for the independent human.
+user_title: 
+email: 
+twitter_username: 
+github_username:  
+gplus_username:  
 
-#Additional Pages
-about: about
-contact: contact
-privacy-policy: privacy-policy
+# Google-analytics
+google-analytics:
+  id: ""
 
-
-permalink: /:title
-
-
-# Google Analytics
-analytics_id: ""
-
-# Build settings
-markdown: kramdown
-
-kramdown:
-  parse_block_html: true
-
-plugins:
-  - jekyll-paginate
-
-
-# Settings for rake task
-safe: False
-lsi: False
-username: samanyougarg #github username
-repo: hanuman #github repository
-branch: master #branch
-relative_source: ../hanuman/ #source directory
-destination: ../hanuman-pages/ #destination directory
-production_url:  https://samanyougarg.com/
-source_url:  https://github.com/samanyougarg/hanuman #source repository url
-
-exclude:
-  - README.md
-  - Rakefile
-  - Gemfile
-  - Gemfile.lock
-  - changelog.md
-  - "*.Rmd"
-  - vendor
-  - .travis.yml
-theme: jekyll-theme-cayman
+exclude: ['package.json', 'src' , 'node_modules']
