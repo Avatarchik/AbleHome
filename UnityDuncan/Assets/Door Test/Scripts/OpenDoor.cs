@@ -14,11 +14,6 @@ public class OpenDoor : MonoBehaviour
     // This object must have a ThalmicMyo script attached.
     public GameObject myo = null;
 
-    // Materials to change to when poses are made.
-    public Material waveInMaterial;
-    public Material waveOutMaterial;
-    public Material doubleTapMaterial;
-
     // The pose from the last update. This is used to determine if the pose has changed
     // so that actions are only performed upon making them rather than every frame during
     // which they are active.
@@ -46,17 +41,19 @@ public class OpenDoor : MonoBehaviour
 
             // Change material when wave in, wave out or double tap poses are made.
             } else if (thalmicMyo.pose == Pose.WaveIn) {
-				GetComponent<Renderer> ().transform.Rotate (Vector3.right * 20);
+				transform.Rotate (Vector3.up * 60);
+//				transform.Rotate (Vector3.right * 20);
 
                 ExtendUnlockAndNotifyUserAction (thalmicMyo);
             } else if (thalmicMyo.pose == Pose.WaveOut) {
-				GetComponent<Renderer> ().transform.Rotate (Vector3.left * 20);
+				transform.Rotate (Vector3.down * 60);
+//				transform.Rotate (Vector3.left * 20);
 
                 ExtendUnlockAndNotifyUserAction (thalmicMyo);
-            } else if (thalmicMyo.pose == Pose.DoubleTap) {
-				GetComponent<Renderer> ().transform.Rotate (Vector3.down * 20);
-
-                ExtendUnlockAndNotifyUserAction (thalmicMyo);
+//            } else if (thalmicMyo.pose == Pose.DoubleTap) {
+//				transform.Rotate (Vector3.down * 20);
+//
+//                ExtendUnlockAndNotifyUserAction (thalmicMyo);
             }
         }
     }

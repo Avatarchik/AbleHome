@@ -550,9 +550,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1230392507}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -2.2, y: 3, z: 0}
   m_LocalScale: {x: 4, y: 6, z: 0.2}
-  m_Children: []
+  m_Children:
+  - {fileID: 1263140190}
   m_Father: {fileID: 2082884989}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -634,11 +635,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1263140189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3, y: 3, z: 0.2}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -0.325, y: 0, z: 1}
+  m_LocalScale: {x: 0.125, y: 0.083333336, z: 2.5}
   m_Children: []
-  m_Father: {fileID: 2082884989}
-  m_RootOrder: 1
+  m_Father: {fileID: 1230392508}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1263140191
 MeshRenderer:
@@ -886,9 +887,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myo: {fileID: 1201201557}
-  waveInMaterial: {fileID: 2100000, guid: 083e301adb9a1468f89920216d0b67fb, type: 2}
-  waveOutMaterial: {fileID: 2100000, guid: 18f24147a7bbb473d8f7952e2117d83b, type: 2}
-  doubleTapMaterial: {fileID: 2100000, guid: 9e3e29383c74e4f4f983e245dac17f4a, type: 2}
 --- !u!4 &2082884989
 Transform:
   m_ObjectHideFlags: 0
@@ -896,11 +894,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2082884987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.19, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1230392508}
-  - {fileID: 1263140190}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
