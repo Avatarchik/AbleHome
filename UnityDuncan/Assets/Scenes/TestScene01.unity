@@ -318,6 +318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1015758531}
   - component: {fileID: 1015758530}
+  - component: {fileID: 1015758532}
   m_Layer: 0
   m_Name: SampleSceneGUI
   m_TagString: Untagged
@@ -350,6 +351,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1015758532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1015758529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b6fe8978b4a4d59ac2a4a3c23c5bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1036158881
 GameObject:
   m_ObjectHideFlags: 0

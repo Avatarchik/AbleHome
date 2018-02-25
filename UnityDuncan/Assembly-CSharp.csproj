@@ -51,7 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
      <Compile Include="Assets\Door Test\Scripts\OpenDoor.cs" />
+=======
+>>>>>>> master
      <Compile Include="Assets\Myo\Scripts\Myo.NET\EventTypes.cs" />
      <Compile Include="Assets\Myo\Scripts\Myo.NET\Hub.cs" />
      <Compile Include="Assets\Myo\Scripts\Myo.NET\libmyo.cs" />
@@ -62,6 +65,10 @@
      <Compile Include="Assets\Myo\Scripts\Myo.NET\Vector3.cs" />
      <Compile Include="Assets\Myo\Scripts\ThalmicHub.cs" />
      <Compile Include="Assets\Myo\Scripts\ThalmicMyo.cs" />
+     <Compile Include="Assets\Scripts\ColorBoxByPose.cs" />
+     <Compile Include="Assets\Scripts\JointOrientation.cs" />
+     <Compile Include="Assets\Scripts\PhotonComm.cs" />
+     <Compile Include="Assets\Scripts\SampleSceneGUI.cs" />
      <None Include="Assets\Myo\README-MyoUnity.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
