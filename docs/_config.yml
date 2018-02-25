@@ -55,3 +55,4 @@ exclude:
   - "*.Rmd"
   - vendor
   - .travis.yml
+theme: jekyll-theme-cayman
