@@ -1,4 +1,4 @@
-![alt text](http://ablehome.tech/ablelogo.png "AbleHome")
+![alt text](http://ablehome.tech/AbleLogoColor.png "AbleHome")
 
 # About
 AbleHome is a working-prototype to help improve accessibility for the elderly and individuals with disabilities. As family members and friends age, it's common for loved ones to worry about and dedicate much of their day to caring for them. AbleHome seeks to restore the independence to these individuals and their caretakers.
