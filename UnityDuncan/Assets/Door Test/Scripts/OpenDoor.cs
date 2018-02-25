@@ -29,20 +29,34 @@ public class OpenDoor : MonoBehaviour
 	// so that actions are only performed upon making them rather than every frame during
 	// which they are active.
 	private Pose _lastPose = Pose.Unknown;
+	private bool isLocked = true;
 
 	// Update is called once per frame.
 	void Update ()
 	{
 		// Access the ThalmicMyo component attached to the Myo object.
 		ThalmicMyo thalmicMyo = myo.GetComponent<ThalmicMyo> ();
-		float currentZ = myo.transform.forward.z;
 
-		if (currentZ < 0) {
-			transform.rotation = new Quaternion(0, 0, 0, 1);
-		} else if (currentZ > 1) {
-			transform.rotation = new Quaternion(0, 1, 0, 1);
-		} else {
-			transform.rotation = new Quaternion(0, currentZ, 0, 1);
+		if (thalmicMyo.pose != _lastPose) {
+			_lastPose = thalmicMyo.pose;
+			Debug.Log (_lastPose);
+			if (_lastPose == Pose.DoubleTap) {
+				isLocked = !isLocked;
+				Debug.Log (isLocked);
+			}
+		}
+
+		if (!isLocked) {
+			float currentZ = myo.transform.forward.z;
+			Debug.Log (currentZ);
+
+			if (currentZ < 0) {
+				transform.rotation = new Quaternion(0, 0, 0, 1);
+			} else if (currentZ > 1) {
+				transform.rotation = new Quaternion(0, 1, 0, 1);
+			} else {
+				transform.rotation = new Quaternion(0, currentZ, 0, 1);
+			}
 		}
 	}
 
