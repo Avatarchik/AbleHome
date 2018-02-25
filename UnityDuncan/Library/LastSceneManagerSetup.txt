@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/TestScene01.unity
+- path: Assets/Door Test/Door.unity
   isLoaded: 1
   isActive: 1
