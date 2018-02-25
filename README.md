@@ -34,4 +34,4 @@ AbleHome is a framework that connects the Myo Gesture Control Armband with smart
 - Python
 
 ## Demo
-[YouTube] : https://youtu.be/lDHQ7rv8_2M
+[YouTube](https://youtu.be/lDHQ7rv8_2)
